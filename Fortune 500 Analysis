@@ -77,3 +77,8 @@ from fortune_companies
 group by industry
 having av_rev >200
 
+--Assesing which companies have best employee turn over by pulling only companies with avg tenure of 6.5 years
+select *
+from fortune_companies
+where avg_employee_tenure >=6.5
+order by industry
