@@ -82,3 +82,9 @@ select *
 from fortune_companies
 where avg_employee_tenure >=6.5
 order by industry
+
+--Showing which companies do not offer healthcare benefits, how long the average employee tenure and how much revenue the company brings
+select company_name, healthcare_benefits, avg_employee_tenure, round(revenue)as revenue
+from fortune_companies
+where healthcare_benefits=0
+order by avg_employee_tenure
